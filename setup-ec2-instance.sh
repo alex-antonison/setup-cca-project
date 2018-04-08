@@ -7,7 +7,7 @@
 # Default security with all ports open
 
 # Updating instance
-git clone https://github.com/alex-antonison/setup-cca-project.git
+# git clone https://github.com/alex-antonison/setup-cca-project.git
 sudo apt-get update && sudo apt-get upgrade -y
 mkdir local-dev
 
