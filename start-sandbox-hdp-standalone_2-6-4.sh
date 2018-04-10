@@ -6,7 +6,7 @@ if [ $? -eq 0 ]; then
  docker start sandbox-hdp
 else
 docker pull hortonworks/sandbox-hdp-standalone:2.6.4
-sudo docker run --name sandbox-hdp --hostname "sandbox-hdp.hortonworks.com" --privileged -d --restart unless-stopped \
+docker run --name sandbox-hdp --hostname "sandbox-hdp.hortonworks.com" --privileged -d --restart unless-stopped \
 -p 15500:15500 \
 -p 15501:15501 \
 -p 15502:15502 \
