@@ -1,11 +1,13 @@
 # need to reset ambari admin password - default is hadoop
 # This gets you into the happy base
 ssh root@127.0.0.1 -p 2222
+ambari-admin-password-reset
 
 # How to setup a tunnel
-ssh -i "aws-boinc-key.pem" -N -L 8080:ec2-34-234-83-233.compute-1.amazonaws.com:8080 ubuntu@ec2-34-234-83-233.compute-1.amazonaws.com
+nohup ssh -i "aws-boinc-key.pem" -N -L 8080:ec2-35-153-134-7.compute-1.amazonaws.com:8080 ubuntu@ec2-35-153-134-7.compute-1.amazonaws.com &
 
-
+# If you stop instance
+# Do this to reboot it
 
 
 

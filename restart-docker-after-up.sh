@@ -1,12 +1,5 @@
 #!/bin/bash
-echo "Waiting for docker daemon to start up:"
-until docker ps 2>&1| grep STATUS>/dev/null; do  sleep 1; done;  >/dev/null
-docker ps -a | grep sandbox-hdp
-if [ $? -eq 0 ]; then
- docker start sandbox-hdp
-else
-docker pull hortonworks/sandbox-hdp-standalone:2.6.4
-sudo docker run --name sandbox-hdp --hostname "sandbox-hdp.hortonworks.com" --privileged -d --restart unless-stopped \
+docker start sandbox-hdp --privileged -d --restart unless-stopped \
 -p 15500:15500 \
 -p 15501:15501 \
 -p 15502:15502 \
@@ -86,5 +79,5 @@ sudo docker run --name sandbox-hdp --hostname "sandbox-hdp.hortonworks.com" --pr
 -p 6188:6188 \
 -p 2222:22 \
 hortonworks/sandbox-hdp-standalone:2.6.4 /usr/sbin/sshd -D
-fi
+
 docker exec -t sandbox-hdp /root/start-sandbox-hdp.sh
