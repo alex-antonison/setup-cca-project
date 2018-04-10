@@ -13,6 +13,8 @@
 # HTTP            | TCP      | 80         | Anywhere
 # HTTPS           | TCP      | 443        | Anywhere
 # SSH             | TCP      | 22         | Anywhere
+# Custom TCP Rule | TCP      | 7474       | Anywhere
+# Custom TCP Rule | TCP      | 5601       | Anywhere
 
 # Although you can start off without using a keypair, it is highly recommended to create and use one.
 
@@ -61,5 +63,5 @@ sudo docker run -d --restart unless-stopped \
     docker.elastic.co/kibana/kibana:6.2.3
 
 # Setting up hortonworks vm
-chmod 770 setup-cca-project/start-sandbox-hdp-standalone_2-6-4.sh
-sudo ./setup-cca-project/start-sandbox-hdp-standalone_2-6-4.sh
+# chmod 770 setup-cca-project/start-sandbox-hdp-standalone_2-6-4.sh
+# sudo ./setup-cca-project/start-sandbox-hdp-standalone_2-6-4.sh
