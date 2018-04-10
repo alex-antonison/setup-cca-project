@@ -7,7 +7,7 @@ if [ $? -eq 0 ]; then
 else
 docker pull hortonworks/sandbox-hdp-standalone:2.6.4
 docker run --name sandbox-hdp --hostname "sandbox-hdp.hortonworks.com" --privileged -d --restart unless-stopped \
--v /home/ubuntu/local-dir:/local-dir/ /
+-v /home/ubuntu/local-dir:/local-dir/ \
 --network my-net \
 -p 15500:15500 \
 -p 15501:15501 \
