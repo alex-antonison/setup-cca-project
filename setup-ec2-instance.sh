@@ -23,6 +23,7 @@
 
 sudo apt-get update && sudo apt-get upgrade -y
 mkdir local-dir
+git clone https://github.com/adeveloperdiary/cca_498_final_project.git
 
 # Installing and starting Docker
 sudo apt install docker.io -y
@@ -76,6 +77,9 @@ sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update
 sudo apt-get install oracle-java8-installer -y
 
+echo "export PYSPARK_PYTHON=/usr/bin/python3" > ~/.bash_profile
+source ~/.bash_profile
+
 # Setting up hortonworks vm
 # chmod 770 setup-cca-project/start-sandbox-hdp-standalone_2-6-4.sh
-# sudo ./setup-cca-project/start-sandbox-hdp-standalone_2-6-4.sh
+sudo ~/./setup-cca-project/start-sandbox-hdp-standalone_2-6-4.sh
